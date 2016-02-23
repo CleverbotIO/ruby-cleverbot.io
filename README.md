@@ -1,4 +1,4 @@
-# cleverbot_io
+# cleverbot.io
 [![Gem Version](https://badge.fury.io/rb/cleverbot_io.svg)](https://badge.fury.io/rb/cleverbot_io)
 
 A Ruby wrapper for the cleverbot.io API.
@@ -8,6 +8,8 @@ A Ruby wrapper for the cleverbot.io API.
 ``` shell
 $ gem install cleverbot_io
 ```
+
+Before using this module, please get your API keys at http://cleverbot.io/keys
 
 ### Bundler
 Add this line to your Gemfile:

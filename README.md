@@ -1,5 +1,6 @@
 # cleverbot.io
 [![Gem Version](https://badge.fury.io/rb/cleverbot_io.svg)](https://badge.fury.io/rb/cleverbot_io)
+[![Slack Status](https://slack.cleverbot.io/badge.svg)](https://slack.cleverbot.io)
 
 A Ruby wrapper for the cleverbot.io API.
 

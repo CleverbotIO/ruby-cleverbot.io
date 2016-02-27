@@ -2,13 +2,13 @@ Gem::Specification.new do |s|
   s.authors = ['Eli Foster']
   s.name = 'cleverbot_io'
   s.summary = 'A Ruby wrapper for the Cleverbot.io web API.'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.license = 'CC-BY-NC-ND-4.0'
-  s.description = 'A very basic wrapper to the Cleverbot.io web API.'
+  s.description = 'A fully featured wrapper to the Cleverbot.io web API.'
   s.email = 'elifosterwy@gmail.com'
-  s.homepage = 'https://github.com/elifoster/cleverbot_io'
+  s.homepage = 'https://github.com/CleverbotIO/ruby-cleverbot.io'
   s.metadata = {
-    'issue_tracker' => 'https://github.com/elifoster/cleverbot_io/issues'
+    'issue_tracker' => 'https://github.com/CleverobtIO/ruby-cleverbot.io/issues'
   }
   s.files = [
     'lib/cleverbot.rb',

@@ -1,7 +1,7 @@
 require 'httpclient'
-require 'json'
+require 'oj'
+require_relative 'cleverbot_errors'
 
-# @todo Error handling.
 class Cleverbot
   # @return [String] The API User for the instance.
   attr_reader :api_user
@@ -27,8 +27,9 @@ class Cleverbot
       key: @api_key
     }
     params[:nick] = @nick unless @nick.nil?
-    response = JSON.parse(@client.post('https://cleverbot.io/1.0/create', params).body)
-    @nick = response['nick'] if response['status'] == 'success'
+    response = Oj.load(@client.post('https://cleverbot.io/1.0/create', params).body)
+    try_throw(response['status'])
+    @nick = response['nick']
   end
 
   # Sends the bot a message and returns its response.
@@ -41,11 +42,24 @@ class Cleverbot
       text: str,
       nick: @nick
     }
-    response = JSON.parse(@client.post('https://cleverbot.io/1.0/ask', params).body)
-    if response['status'] == 'success'
-      response['response']
-    else
-      response['status']
+    response = Oj.load(@client.post('https://cleverbot.io/1.0/ask', params).body)
+    try_throw(response['status'])
+
+    response['response']
+  end
+
+  private
+
+  # Throws the relevant errors if possible.
+  # @param status [String] The status value from the API
+  # @raise [IncorrectCredentialsError] If the api_user and api_key are incorrect.
+  # @raise [DuplicatedReferenceNamesError] If the reference name is already in use by the instance.
+  def try_throw(status)
+    case status
+    when 'Error: API credentials incorrect' then fail Cleverbot::Errors::IncorrectCredentialsError
+    when 'Error: reference name already exists' then fail Cleverbot::Errors::DuplicatedReferenceNamesError
+    when 'success' then return
+    else fail "#{response['status']} UNRECOGNIZED ERROR! PLEASE REPORT TO CLEVERBOT RUBY ISSUE TRACKER."
     end
   end
 end

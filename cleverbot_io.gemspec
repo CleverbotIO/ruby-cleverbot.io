@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.authors = ['Eli Foster']
   s.name = 'cleverbot_io'
   s.summary = 'A Ruby wrapper for the Cleverbot.io web API.'
-  s.version = '1.2.0'
+  s.version = '1.2.1'
   s.license = 'CC-BY-NC-ND-4.0'
   s.description = 'A fully featured wrapper to the Cleverbot.io web API.'
   s.email = 'elifosterwy@gmail.com'
@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
     'lib/cleverbot_errors.rb',
     'CHANGELOG.md'
   ]
-  s.add_runtime_dependency('httpclient', '2.7.1')
-  s.add_runtime_dependency('oj', '2.14.6')
+  s.add_runtime_dependency('httpclient', '~> 2.7')
+  s.add_runtime_dependency('oj', '~> 2.15')
 end

@@ -1,5 +1,9 @@
 # Changelog
 ## Version 1
+### 1.2.2
+* Bump HTTPClient version.
+* Relicense as MIT.
+
 ### 1.2.1
 * Use pessimistic version requirements, and bump Oj dependency.
 

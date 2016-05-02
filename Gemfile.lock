@@ -1,14 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    httpclient (2.7.1)
+    httpclient (2.8.0)
     oj (2.15.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  httpclient (~> 2.7)
+  httpclient (~> 2.8)
   oj (~> 2.15)
 
 BUNDLED WITH

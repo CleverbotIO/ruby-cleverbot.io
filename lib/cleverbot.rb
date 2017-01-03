@@ -21,6 +21,7 @@ class Cleverbot
     @api_key = api_key
     @nick = nick
     @client = HTTPClient.new
+    @client.ssl_config.options |= OpenSSL::SSL::OP_NO_SSLv3
 
     params = {
       user: @api_user,

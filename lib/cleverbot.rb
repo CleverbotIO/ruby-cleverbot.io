@@ -59,7 +59,7 @@ class Cleverbot
     when 'Error: API credentials incorrect' then fail Cleverbot::Errors::IncorrectCredentialsError
     when 'Error: reference name already exists' then fail Cleverbot::Errors::DuplicatedReferenceNamesError
     when 'success' then return
-    else fail "#{response['status']} UNRECOGNIZED ERROR! PLEASE REPORT TO CLEVERBOT RUBY ISSUE TRACKER."
+    else fail "#{status} UNRECOGNIZED ERROR! PLEASE REPORT TO CLEVERBOT RUBY ISSUE TRACKER."
     end
   end
 end

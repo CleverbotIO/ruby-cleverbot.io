@@ -1,5 +1,8 @@
 # Changelog
 ## Version 1
+### 1.2.3
+* Fix unrecognized error throwing an error (#6) (saxton-tad)
+
 ### 1.2.2
 * Bump HTTPClient version.
 * Relicense as MIT.

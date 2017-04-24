@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   }
   s.files = [
     'lib/cleverbot.rb',
-    'lib/cleverbot_errors.rb',
     'CHANGELOG.md'
   ]
   s.add_runtime_dependency('httpclient', '~> 2.8')

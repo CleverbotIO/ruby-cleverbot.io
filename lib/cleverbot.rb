@@ -1,6 +1,5 @@
 require 'httpclient'
 require 'oj'
-require_relative 'cleverbot_errors'
 
 class Cleverbot
   # @return [String] The API User for the instance.
@@ -48,18 +47,16 @@ class Cleverbot
     response['response']
   end
 
+  # A generic Error class for all Cleverbot errors.
+  class Error < StandardError; end
+
   private
 
   # Throws the relevant errors if possible.
   # @param status [String] The status value from the API
-  # @raise [IncorrectCredentialsError] If the api_user and api_key are incorrect.
-  # @raise [DuplicatedReferenceNamesError] If the reference name is already in use by the instance.
+  # @raise [Cleverbot::Error] If an error is thrown by the Cleverbot API.
   def try_throw(status)
-    case status
-    when 'Error: API credentials incorrect' then fail Cleverbot::Errors::IncorrectCredentialsError
-    when 'Error: reference name already exists' then fail Cleverbot::Errors::DuplicatedReferenceNamesError
-    when 'success' then return
-    else fail "#{status} UNRECOGNIZED ERROR! PLEASE REPORT TO CLEVERBOT RUBY ISSUE TRACKER."
-    end
+    return if status == 'success'
+    fail Error.new(status)
   end
 end

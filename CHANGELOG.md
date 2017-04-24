@@ -1,4 +1,8 @@
 # Changelog
+## Version 2
+### 2.0.0
+* Rewrite Errors stuff. There is now just a single `Cleverbot::Error` class. This improves portability with breaking API changes, and is just nicer in general.
+
 ## Version 1
 ### 1.2.3
 * Fix unrecognized error throwing an error (#6) (saxton-tad)

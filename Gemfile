@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.6.3'
 
 gem('httpclient', '~> 2.8')
-gem('oj', '~> 2.15')
+gem('oj', '~> 3.7')

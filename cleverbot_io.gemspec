@@ -15,5 +15,5 @@ Gem::Specification.new do |s|
     'CHANGELOG.md'
   ]
   s.add_runtime_dependency('httpclient', '~> 2.8')
-  s.add_runtime_dependency('oj', '~> 2.15')
+  s.add_runtime_dependency('oj', '~> 3.7')
 end

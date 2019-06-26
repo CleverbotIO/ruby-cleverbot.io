@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.authors = ['Eli Foster']
   s.name = 'cleverbot_io'
   s.summary = 'A Ruby wrapper for the Cleverbot.io web API.'
-  s.version = '2.0.0'
+  s.version = '2.0.1'
   s.license = 'MIT'
   s.description = 'A fully featured wrapper to the Cleverbot.io web API.'
   s.email = 'elifosterwy@gmail.com'

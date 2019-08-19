@@ -4,10 +4,7 @@
 
 A Ruby wrapper for the cleverbot.io API.
 
-**Important**: For all I know, the cleverbot.io API does not work anymore. Because it has not been officially deprecated
-or discontinued, I will keep this gem up to date in terms of its dependencies (oj and httpclient), so that applications
-that require this gem can keep their other gems up to date. Though this project is part of the Cleverbot IO project,
-I have nothing to do with and am not responsible for the maintenance of the Cleverbot IO API itself.
+**Important**: For all I know, the cleverbot.io API does not work anymore. This gem, therefore, will not be kept up to date in terms of its dependencies (oj and httpclient) Though this project is part of the Cleverbot IO project, I have nothing to do with and am not responsible for the maintenance of the Cleverbot IO API itself. The maintainer of the API has gone MIA. If your application still requires this gem, you should remove it.
 
 ## Installation
 ### Ruby Gems
